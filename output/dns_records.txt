@@ -1,0 +1,24 @@
+A : 172.217.18.110
+AAAA : 2a00:1450:4003:812::200e
+CAA : 0 issue "pki.goog"
+HTTPS : 1 . alpn="h2,h3"
+MX : 10 smtp.google.com.
+NS : ns1.google.com.
+NS : ns4.google.com.
+NS : ns3.google.com.
+NS : ns2.google.com.
+SOA : ns1.google.com. dns-admin.google.com. 890873404 900 900 1800 60
+TXT : "google-site-verification=4ibFUgB-wXLQ_S7vsXVomSTVamuOXBiVAzpR5IZ87D0"
+TXT : "google-site-verification=wD8N7i1JTNTkezJ49swvWW48f8_9xveREV4oB-0Hf5o"
+TXT : "onetrust-domain-verification=0d477fe608074e6f9c12bca7826035cc"
+TXT : "globalsign-smime-dv=CDYX+XFHUw2wml6/Gb8+59BsH31KzUr6c1l2BPvqKX8="
+TXT : "MS=E4A68B9AB2BB9670BCE15412F62916164C0B20BB"
+TXT : "facebook-domain-verification=22rm551cu4k0ab0bxsw536tlds4h95"
+TXT : "cisco-ci-domain-verification=47c38bc8c4b74b7233e9053220c1bbe76bcc1cd33c7acf7acd36cd6a5332004b"
+TXT : "apple-domain-verification=30afIBcvSuDV2PLX"
+TXT : "docusign=1b0a6754-49b1-4db5-8540-d2c12664b289"
+TXT : "onetrust-domain-verification=6d685f1d41a94696ad7ef771f68993e0"
+TXT : "google-site-verification=TV9-DBe4R80X4v0M4U_bd_J9cpOJM0nikft0jAgjmsQ"
+TXT : "docusign=05958488-4752-4ef2-95eb-aa7ba8a3bd0e"
+TXT : "v=spf1 include:_spf.google.com ~all"
+DMARC : "v=DMARC1; p=reject; rua=mailto:mailauth-reports@google.com"

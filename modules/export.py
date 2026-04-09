@@ -22,7 +22,10 @@ def export(output, data):
 def txt_unpack(outfile, val):
     def write_item(item):
         if isinstance(item, list):
-            outfile.write(f'{item[0]}\t{item[1]}\t\t{item[2]}\n')
+            # sécuriser l'accès aux index
+            for i in range(len(item)):
+                outfile.write(f'{item[i]}\t')
+            outfile.write('\n')
         else:
             outfile.write(f'{item}\n')
 
@@ -34,7 +37,7 @@ def txt_unpack(outfile, val):
         for sub_key, sub_val in val.items():
             if sub_key == 'exported':
                 continue
-            if isinstance(sub_val, list):
+            if isinstance(sub_val, list) or isinstance(sub_val, dict):
                 txt_unpack(outfile, sub_val)
             else:
                 outfile.write(f'{sub_key}: {sub_val}\n')
@@ -43,7 +46,8 @@ def txt_unpack(outfile, val):
 def txt_export(data, outfile):
     for key, val in data.items():
         if key.startswith('module'):
-            if not val['exported']:
+            # ✅ FIX : utilise get pour éviter KeyError
+            if not val.get('exported', False):
                 txt_unpack(outfile, val)
                 val['exported'] = True
         elif key.startswith('Type'):
